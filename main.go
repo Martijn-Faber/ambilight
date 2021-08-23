@@ -18,8 +18,7 @@ func main() {
 		panic(err)
 	}
 
-	// TODO: fix ip to config
-	wled.Init("192.168.0.180", config.WledPort)
+	wled.Init(config.WledIp, config.WledPort)
 	scrWidth, scrHeight, _ := util.GetScreenInfo()
 
 	for {

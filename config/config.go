@@ -8,7 +8,7 @@ type Config struct{
 	NumLedsX int `mapstructure:"NUM_LEDS_X"`
 	NumLedsY int `mapstructure:"NUM_LEDS_Y"`
 	RefTimeMs int `mapstructure:"REFRESH_TIME_IN_MS"`
-	WledIp string `mapstruture:"WLED_IP"`
+	WledIp string `mapstructure:"WLED_IP"`
 	WledPort int `mapstructure:"WLED_PORT"`
 }
 
