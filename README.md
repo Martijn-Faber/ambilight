@@ -1,6 +1,6 @@
 # Ambilight
 
-for now this only works on linux, but feel free to create a PR to support your platform
+for now this only works on linux, but feel free to [create a PR](/pulls) to support your platform
 
 ## Partslist
 
