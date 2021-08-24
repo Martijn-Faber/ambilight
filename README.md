@@ -17,10 +17,14 @@ for now this only works on linux, but feel free to [create a PR](https://github.
    ```bash
    go get
    ```
-6. run it
+6. build it
    ```bash
-   go run main.go
+   go build
    ```
+7. run it
+    ```bash
+    ./ambilight
+    ```
 
 ## Compatible LED Strips
 
