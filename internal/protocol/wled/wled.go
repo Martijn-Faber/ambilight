@@ -3,7 +3,7 @@ package wled
 import (
 	"net"
 
-	"github.com/Martijn-Faber/ambilight/internal/block"
+	"github.com/Martijn-Faber/ambilight/pkg/color"
 )
 
 var conn net.Conn
@@ -23,7 +23,7 @@ func Init(ip string, port int) {
 	conn = c
 }
 
-func Send(clrs []block.Rgb) error {
+func Send(clrs []color.Rgb) error {
 	var buf []byte
 
 	// protocol type

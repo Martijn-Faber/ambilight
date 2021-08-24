@@ -2,14 +2,12 @@ package block
 
 import (
 	"image"
+
+	"github.com/Martijn-Faber/ambilight/pkg/color"
 )
 
-type Rgb struct {
-	R, G, B byte
-}
-
-func GetBlocks(img *image.RGBA, blkSizeX int, blkSizeY int, numBlkX int, numBlkY int, scrWidth int) []Rgb {
-	var clr []Rgb
+func GetBlocks(img *image.RGBA, blkSizeX int, blkSizeY int, numBlkX int, numBlkY int, scrWidth int) []color.Rgb {
+	var clr []color.Rgb
 
 	// bottom right to top right
 	for blkY := (numBlkY - 1); blkY >= 0; blkY-- {

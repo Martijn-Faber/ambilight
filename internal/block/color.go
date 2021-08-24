@@ -2,9 +2,11 @@ package block
 
 import (
 	"image"
+
+	"github.com/Martijn-Faber/ambilight/pkg/color"
 )
 
-func GetAverageBlockColor(img *image.RGBA, blkX int, blkY int, blkSizeX int, blkSizeY int, scrWidth int) Rgb {
+func GetAverageBlockColor(img *image.RGBA, blkX int, blkY int, blkSizeX int, blkSizeY int, scrWidth int) color.Rgb {
 	var rSum float32
 	var gSum float32
 	var bSum float32
@@ -33,9 +35,5 @@ func GetAverageBlockColor(img *image.RGBA, blkX int, blkY int, blkSizeX int, blk
 	var gAvg = gSum / totalPix
 	var bAvg = bSum / totalPix
 
-	return Rgb{
-		R: byte(rAvg),
-		G: byte(gAvg),
-		B: byte(bAvg),
-	}
+	return color.Rgb{byte(rAvg), byte(gAvg), byte(bAvg)}
 }
