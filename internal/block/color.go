@@ -35,5 +35,5 @@ func GetAverageBlockColor(img *image.RGBA, blkX int, blkY int, blkSizeX int, blk
 	var gAvg = gSum / totalPix
 	var bAvg = bSum / totalPix
 
-	return color.Rgb{byte(rAvg), byte(gAvg), byte(bAvg)}
+	return color.Rgb{rAvg, gAvg, bAvg}
 }

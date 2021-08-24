@@ -1,5 +1,5 @@
 package color
 
 type Rgb struct {
-	R, G, B byte
+	R, G, B float32
 }

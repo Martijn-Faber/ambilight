@@ -35,7 +35,7 @@ func Send(clrs []color.Rgb) error {
 		// red value
 		// green value
 		// blue value
-		buf = append(buf, byte(i), clr.R, clr.G, clr.B)
+		buf = append(buf, byte(i), byte(clr.R), byte(clr.G), byte(clr.B))
 	}
 
 	_, err := conn.Write(buf)
