@@ -33,18 +33,6 @@ func GetAverageBlockColor(img *image.RGBA, blkX int, blkY int, blkSizeX int, blk
 	var gAvg = gSum / totalPix
 	var bAvg = bSum / totalPix
 
-	for y := blkStartY; y < (blkStartY + blkSizeY); y++ {
-		var lineStart = y * bytesPerLine
-		for x := blkStartX; x < (blkStartX + blkSizeX); x++ {
-			var pixelIndex = lineStart + x*bytesPerPixel
-
-			img.Pix[pixelIndex+0] = uint8(rAvg)
-			img.Pix[pixelIndex+1] = uint8(gAvg)
-			img.Pix[pixelIndex+2] = uint8(bAvg)
-			img.Pix[pixelIndex+3] = 255
-		}
-	}
-
 	return Rgb{
 		R: byte(rAvg),
 		G: byte(gAvg),
