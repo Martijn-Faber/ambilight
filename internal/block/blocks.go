@@ -4,18 +4,16 @@ import (
 	"image"
 )
 
-type Rgb struct{
-	R byte
-	G byte
-	B byte
+type Rgb struct {
+	R, G, B byte
 }
 
 func GetBlocks(img *image.RGBA, blkSizeX int, blkSizeY int, numBlkX int, numBlkY int, scrWidth int) []Rgb {
 	var clr []Rgb
 
 	// bottom right to top right
-	for blkY := (numBlkY-1); blkY >= 0; blkY-- {
-		clr = append(clr, GetAverageBlockColor(img, (numBlkX - 1), blkY, blkSizeX, blkSizeY, scrWidth))
+	for blkY := (numBlkY - 1); blkY >= 0; blkY-- {
+		clr = append(clr, GetAverageBlockColor(img, (numBlkX-1), blkY, blkSizeX, blkSizeY, scrWidth))
 	}
 
 	// top right to left top
@@ -27,6 +25,6 @@ func GetBlocks(img *image.RGBA, blkSizeX int, blkSizeY int, numBlkX int, numBlkY
 	for blkY := 0; blkY < numBlkY; blkY++ {
 		clr = append(clr, GetAverageBlockColor(img, 0, blkY, blkSizeX, blkSizeY, scrWidth))
 	}
-	
+
 	return clr
 }
