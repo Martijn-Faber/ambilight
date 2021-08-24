@@ -1,4 +1,4 @@
-module github.com/Martijn-Faber/Ambilight
+module github.com/Martijn-Faber/ambilight
 
 go 1.16
 

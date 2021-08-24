@@ -3,14 +3,14 @@ package wled
 import (
 	"net"
 
-	"github.com/Martijn-Faber/Ambilight/internal/block"
+	"github.com/Martijn-Faber/ambilight/internal/block"
 )
 
 var conn net.Conn
 
 func Init(ip string, port int) {
 	addr := net.UDPAddr{
-		IP: net.ParseIP(ip),
+		IP:   net.ParseIP(ip),
 		Port: port,
 	}
 
@@ -25,7 +25,7 @@ func Init(ip string, port int) {
 
 func Send(clrs []block.Rgb) error {
 	var buf []byte
-	
+
 	// protocol type
 	// time to wait in seconds
 	buf = append(buf, 1, 10)

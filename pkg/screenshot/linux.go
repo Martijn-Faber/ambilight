@@ -5,7 +5,7 @@ import (
 
 	"github.com/BurntSushi/xgb"
 	"github.com/BurntSushi/xgb/xproto"
-	"github.com/Martijn-Faber/Ambilight/util"
+	"github.com/Martijn-Faber/ambilight/util"
 )
 
 var conn *xgb.Conn
@@ -37,10 +37,5 @@ func CaptureScreen() (*image.RGBA, error) {
 		return nil, err
 	}
 
-	data := i.Data
-	for i := 0; i < len(data); i += 4 {
-		data[i], data[i+2], data[i+3] = data[i+2], data[i], 255
-	}
-
-	return &image.RGBA{data, 4 * r.Dx(), r}, err
+	return &image.RGBA{i.Data, 4 * r.Dx(), r}, err
 }
