@@ -1,6 +1,6 @@
 # Ambilight
 
-for now this only works on linux, but feel free to [create a PR](/pulls) to support your platform
+for now this only works on linux, but feel free to [create a PR](https://github.com/Martijn-Faber/ambilight/pulls) to support your platform
 
 ## Partslist
 
