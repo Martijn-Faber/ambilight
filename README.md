@@ -26,6 +26,10 @@ for now this only works on linux, but feel free to [create a PR](https://github.
     ./ambilight
     ```
 
+## Contributing
+feel free to contribute to this project
+check [CONTRIBUTING](./CONTRIBUTING.md) before you commiting
+
 ## Compatible LED Strips
 
 | Type                   | Voltage | Comments                      |
@@ -49,3 +53,6 @@ for now this only works on linux, but feel free to [create a PR](https://github.
 ## Credits
 
 [@afaber999](https://github.com/afaber999)
+
+## License
+this project is licensed under the [MIT license](./LICENSE)
