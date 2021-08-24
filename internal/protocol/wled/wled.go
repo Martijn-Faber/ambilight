@@ -1,7 +1,6 @@
 package wled
 
 import (
-	"fmt"
 	"net"
 
 	"github.com/Martijn-Faber/Ambilight/internal/block"
@@ -14,8 +13,6 @@ func Init(ip string, port int) {
 		IP: net.ParseIP(ip),
 		Port: port,
 	}
-
-	fmt.Println(addr.String())
 
 	c, err := net.Dial("udp", addr.String())
 
