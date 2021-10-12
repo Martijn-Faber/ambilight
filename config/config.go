@@ -11,6 +11,9 @@ type Config struct {
 	WledIp        string `mapstructure:"WLED_IP"`
 	WledPort      int    `mapstructure:"WLED_PORT"`
 	InterpolSteps int    `mapstructure:"INTERPOLATE_STEPS"`
+	RCorrection float32 `mapstructure:"R_CORRECTION"`
+	GCorrection float32 `mapstructure:"G_CORRECTION"`
+	BCorrection float32 `mapstructure:"B_CORRECTION"`
 }
 
 func Load() (config Config, err error) {

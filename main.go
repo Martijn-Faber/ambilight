@@ -41,6 +41,11 @@ func main() {
 
 		for i := 0; i < config.InterpolSteps; i++ {
 			clrs := color.InterpolateColors(prevClrs, nextClrs, (i + 1), config.InterpolSteps)
+
+			for _, clr := range clrs {
+				color.CorrectColor(clr, color.Rgb{R: config.RCorrection, G: config.GCorrection, B: config.BCorrection})
+			}
+
 			err = wled.Send(clrs)
 
 			if err != nil {
