@@ -2,6 +2,8 @@
 
 for now this only works on linux, but feel free to [create a PR](https://github.com/Martijn-Faber/ambilight/pulls) to support your platform
 
+[![Demo video](https://img.youtube.com/vi/ftrAhJZCl8g/hqdefault.jpg)](https://www.youtube.com/watch?v=ftrAhJZCl8g)
+
 ## Partslist
 
 - Esp
@@ -22,11 +24,12 @@ for now this only works on linux, but feel free to [create a PR](https://github.
    go build
    ```
 7. run it
-    ```bash
-    ./ambilight
-    ```
+   ```bash
+   ./ambilight
+   ```
 
 ## Contributing
+
 feel free to contribute to this project
 check [CONTRIBUTING](./CONTRIBUTING.md) before you commiting
 
@@ -55,4 +58,5 @@ check [CONTRIBUTING](./CONTRIBUTING.md) before you commiting
 [@afaber999](https://github.com/afaber999)
 
 ## License
+
 this project is licensed under the [MIT license](./LICENSE)
