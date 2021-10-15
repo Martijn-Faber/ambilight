@@ -2,7 +2,7 @@
 
 for now this only works on linux, but feel free to [create a PR](https://github.com/Martijn-Faber/ambilight/pulls) to support your platform
 
-[![Demo video](https://img.youtube.com/vi/ftrAhJZCl8g/hqdefault.jpg)](https://www.youtube.com/watch?v=ftrAhJZCl8g)
+[![Demo video](https://img.youtube.com/vi/ftrAhJZCl8g/maxresdefault.jpg)](https://www.youtube.com/watch?v=ftrAhJZCl8g)
 
 ## Partslist
 
@@ -12,21 +12,20 @@ for now this only works on linux, but feel free to [create a PR](https://github.
 ## installation
 
 1. install WLED on the Esp. You can find great tutorials online or look at their [wiki](https://github.com/Aircoookie/WLED/wiki/)
-2. [install Go](https://golang.org/doc/install)
-3. rename the `config.env.example` to `config.env`
-4. set all the variables
-5. install all the dependencies
-   ```bash
-   go get
-   ```
-6. build it
-   ```bash
-   go build
-   ```
-7. run it
-   ```bash
-   ./ambilight
-   ```
+
+### Binaries
+
+If you want to install a binary, please take a look at the [releases page](https://github.com/Martijn-Faber/ambilight/releases)
+
+### From source
+
+To install it from source you'll first need to [install Go](https://golang.org/doc/install) and clone the [repo](https://github.com/Martijn-Faber/ambilight.git)
+
+```bash
+git clone https://github.com/Martijn-Faber/ambilight.git
+```
+
+after that you'll need to rename the `config.env.example` to `config.env` and set all the variables. the next step is to install all the dependencies by running `go get` in your terminal. To build the binary you can run `go build` and to run it you can do `./ambilight` in your terminal.
 
 ## Contributing
 
