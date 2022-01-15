@@ -43,7 +43,7 @@ func main() {
 			clrs := color.InterpolateColors(prevClrs, nextClrs, (i + 1), config.InterpolSteps)
 
 			for _, clr := range clrs {
-				color.CorrectColor(clr, color.Rgb{R: config.RCorrection, G: config.GCorrection, B: config.BCorrection})
+				clrs[i] = color.CorrectColor(clr, color.Rgb{R: config.RCorrection, G: config.GCorrection, B: config.BCorrection})
 			}
 
 			err = wled.Send(clrs)
