@@ -1,6 +1,8 @@
 package config
 
 import (
+	"os"
+
 	"github.com/spf13/viper"
 )
 
@@ -17,7 +19,13 @@ type Config struct {
 }
 
 func Load() (config Config, err error) {
-	viper.AddConfigPath(".")
+	wd, err := os.Getwd()
+
+	if err != nil {
+		return
+	}
+
+	viper.AddConfigPath(wd)
 	viper.SetConfigName("config")
 	viper.SetConfigType("env")
 	viper.AutomaticEnv()
